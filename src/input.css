@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    font-family:cairo;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .search-for-nav {
+        display: none ;
+    }
+
+}
+@media (min-width:768px) and (max-width:1024px) {
+    .hero-title,
+    .hero-description {
+        text-align:center;
+       
+    }
+}
+
+
+.btn {
+    background-color:#44a9d1;
+    padding:10px 20px ;
+    cursor: pointer;
+    border: none;
+    color:white;
+    font-weight:bold;
+}
+.btn:hover {
+    color:white;
+    filter: brightness(90%);
+}
+
+
+
+.img-translate {
+    animation:translate-image 1s ease-in-out infinite;
+}
+
+@keyframes translate-img {
+    0%,
+    100% {
+        transform: translateX(-15px);
+    }
+    50% {
+        transform:translateX(15px);
+    }
+}
+
+@media (max-width:768px) {
+    .social-icons {
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+}
+
+@media (min-width:300px) and (max-width:767px) {
+    .legal-title {
+        margin-left: 35px !important ;
+        
+    }
+}
+@media (min-width:300px) and (max-width:767px) {
+    .help-title {
+        margin-left: 25px !important ;
+    }
+    .academy-section,
+    .help-section {
+        margin-bottom:40px ;
+    }
+    .links-title {
+        margin-left:10px ;
+    }
+    .icons-for-medium {
+        gap:15px;
+        margin-right:35px;
+    }
+   
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    .meduim-modal {
+        margin-right:150px ;
+        gap:100px;
+    }
+    .icons-for-medium {
+        margin-left: 100px;
+    }
+}
+
+@media (min-width:300px) and (max-width:767px) {
+    .keywords,
+    .all-rights {
+        display:none;
+    }
+    .courses-page .overlay {
+        font-size:30px !important;
+    }
+}
+
+
+      
+     
+      .courses-page .image-section {
+        margin-top: 90px;
+        position: relative;    /* contain absolute overlays */
+        overflow: hidden;      /* prevent overlays from escaping */
+        width: 75vw;
+        left: 50%;
+        transform: translateX(-50%); /* center full-bleed element */
+        background-image: url('/dist/assets/images/it-background.png');
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center center; 
+        background-size: cover;    /* fill while keeping aspect ratio */
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+          .courses-page .overlay-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;              /* ensure overlay-2 matches all edges of image-section */
+            z-index: 9998;
+            background-color: rgba(0,0,0,0.2);
+            margin: 0;
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+
+        .courses-page .overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 1rem;
+            pointer-events: none;
+           
+            
+            
+        }
+
+
+   
+      @media (max-width: 767px) {
+        .courses-page .image-section {
+          height: 350px;
+          width:100vw;
+          bottom:50px !important;
+          top:5px !important;
+        }
+       
+      }
+
+
+      @media (min-width:768px) {
+         .courses-page .image-section {
+            margin-left:10px ;
+         }
+      }
+
+   .button-cyber {
+  display: block;
+  margin: 1.25rem auto 0; /* top spacing and horizontal centering */
+  width: max-content;     /* shrink to button content */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* on very small screens make the button nearly full-width */
+@media (max-width: 420px) {
+  .button-cyber {
+    width: 90%;
+  }
+}
+
+footer {
+  box-sizing: border-box;
+  border-top: clamp(2px, 0.6vw, 2px) solid rgba(135, 207, 235, 0.589); 
+}
+
+/* keep the inner container from drawing its own top border and preserve spacing */
+footer > .mx-auto {
+  box-sizing: border-box;
+  border-top: none;
+  padding-top: 1rem;
+  margin-top: -35px;
+  width: auto;
+}
+
+@media (max-width: 420px) {
+  .footer > .mx-auto {
+    padding-top: 0.75rem;
+  }
+}
+
+
+
+
